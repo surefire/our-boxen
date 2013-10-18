@@ -1,6 +1,7 @@
 class people::andrewgarner {
   include alfred
   include emacs
+  include firefox
   include gitx::dev
   include istatmenus
   include iterm2::stable
