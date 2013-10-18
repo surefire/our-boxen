@@ -3,6 +3,7 @@ class people::andrewgarner {
   include emacs
   include gitx::dev
   include iterm2::stable
+  include skype
 
   include osx::finder::empty_trash_securely
 

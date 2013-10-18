@@ -84,6 +84,11 @@ GITHUBTARBALL
     ruby (6.3.4)
 
 GITHUBTARBALL
+  remote: boxen/puppet-skype
+  specs:
+    skype (1.0.6)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -122,6 +127,7 @@ DEPENDENCIES
   osx (= 1.6.0)
   repository (= 2.2.0)
   ruby (= 6.3.4)
+  skype (= 1.0.6)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
   xquartz (= 1.1.0)
