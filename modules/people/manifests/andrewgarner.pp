@@ -2,6 +2,7 @@ class people::andrewgarner {
   include alfred
   include emacs
   include gitx::dev
+  include istatmenus
   include iterm2::stable
   include skype
   include spotify
