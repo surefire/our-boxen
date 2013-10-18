@@ -1,6 +1,7 @@
 class people::andrewgarner {
   include alfred
   include emacs
+  include gitx::dev
 
   include osx::finder::empty_trash_securely
 

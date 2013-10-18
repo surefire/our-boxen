@@ -39,4 +39,5 @@ github "xquartz",    "1.1.0"
 
 github "alfred",     "1.1.5"
 github "emacs",      "1.1.0"
+github "gitx",       "1.2.0"
 github "osx",        "1.6.0"
