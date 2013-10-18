@@ -2,6 +2,7 @@ class people::andrewgarner {
   include alfred
   include emacs
   include gitx::dev
+  include iterm2::stable
 
   include osx::finder::empty_trash_securely
 
