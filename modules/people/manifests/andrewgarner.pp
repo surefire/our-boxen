@@ -34,6 +34,14 @@ class people::andrewgarner {
       target  => "${dotfiles}/.zshrc",
       require => Repository[$dotfiles];
 
+    "${home}/Library/Application Support/Sublime Text 3/Packages/User":
+      ensure => link,
+      target => "${home}/Dropbox/Preferences/Sublime Text 3/Packages/User";
+
+    "${boxen::config::bindir}/subl":
+      ensure => link,
+      target => "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl";
+
   }
 
   repository {
