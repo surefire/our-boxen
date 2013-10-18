@@ -19,6 +19,11 @@ class people::andrewgarner {
 
   file {
 
+    "${home}/.bundle":
+      ensure  => link,
+      target  => "${dotfiles}/.bundle",
+      require => Repository[$dotfiles];
+
     "${home}/.profile":
       ensure  => link,
       target  => "${dotfiles}/.profile",
