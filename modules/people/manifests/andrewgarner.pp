@@ -4,6 +4,7 @@ class people::andrewgarner {
   include gitx::dev
   include iterm2::stable
   include skype
+  include spotify
   include zsh
 
   include osx::finder::empty_trash_securely
