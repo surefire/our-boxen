@@ -4,6 +4,7 @@ class people::andrewgarner {
   include gitx::dev
   include istatmenus
   include iterm2::stable
+  include rubymine
   include skype
   include spotify
   include tmux
