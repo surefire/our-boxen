@@ -5,6 +5,7 @@ class people::andrewgarner {
   include emacs
   include firefox
   include gitx::dev
+  include handbrake
   include istatmenus
   include iterm2::stable
   include rubymine
