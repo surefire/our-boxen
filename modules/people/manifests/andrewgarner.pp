@@ -15,6 +15,7 @@ class people::andrewgarner {
   include skype
   include spotify
   include tmux
+  include vagrant
   include zsh
 
   include osx::finder::empty_trash_securely
