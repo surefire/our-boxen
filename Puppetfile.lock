@@ -164,6 +164,11 @@ GITHUBTARBALL
     vlc (1.0.5)
 
 GITHUBTARBALL
+  remote: boxen/puppet-wget
+  specs:
+    wget (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
@@ -225,6 +230,7 @@ DEPENDENCIES
   vagrant (= 2.0.13)
   virtualbox (= 1.0.6)
   vlc (= 1.0.5)
+  wget (= 1.0.0)
   xquartz (= 1.1.0)
   zsh (= 1.0.0)
 

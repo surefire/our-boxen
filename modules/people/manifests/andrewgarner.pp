@@ -18,6 +18,7 @@ class people::andrewgarner {
   include vagrant
   include virtualbox
   include vlc
+  include wget
   include zsh
 
   include osx::finder::empty_trash_securely
