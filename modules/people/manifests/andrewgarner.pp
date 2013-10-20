@@ -6,6 +6,7 @@ class people::andrewgarner {
   include firefox
   include gitx::dev
   include handbrake
+  include heroku
   include istatmenus
   include iterm2::stable
   include rubymine
@@ -50,6 +51,11 @@ class people::andrewgarner {
       ensure => link,
       target => "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl";
 
+  }
+
+  heroku::plugin {
+    'accounts':
+      source => 'ddollar/heroku-accounts'
   }
 
   repository {

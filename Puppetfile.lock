@@ -59,6 +59,11 @@ GITHUBTARBALL
     handbrake (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-heroku
+  specs:
+    heroku (2.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.4.1)
@@ -166,6 +171,7 @@ DEPENDENCIES
   git (= 1.2.5)
   gitx (= 1.2.0)
   handbrake (= 1.0.1)
+  heroku (= 2.0.0)
   homebrew (= 1.4.1)
   hub (= 1.0.3)
   inifile (= 1.0.0)
