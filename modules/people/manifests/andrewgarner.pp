@@ -26,6 +26,11 @@ class people::andrewgarner {
   $home     = "/Users/${::boxen_user}"
   $dotfiles = "${home}/.dotfiles"
 
+  class { 'intellij':
+    edition => 'ultimate',
+      version => '12.1.6'
+  }
+
   file {
 
     "${home}/.bundle":
