@@ -38,6 +38,7 @@ github "xquartz",    "1.1.0"
 # https://github.com/boxen.
 
 github "alfred",     "1.1.5"
+github "appcleaner", "1.0.0"
 github "emacs",      "1.1.0"
 github "firefox",    "1.1.3"
 github "gitx",       "1.2.0"
