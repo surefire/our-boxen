@@ -1,6 +1,7 @@
 class people::andrewgarner {
   include alfred
   include appcleaner
+  include cloudapp
   include emacs
   include firefox
   include gitx::dev
