@@ -11,6 +11,7 @@ class people::andrewgarner {
   include iterm2::stable
   include python
   include rubymine
+  include sequel_pro
   include skype
   include spotify
   include tmux

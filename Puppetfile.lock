@@ -124,6 +124,11 @@ GITHUBTARBALL
     rubymine (1.0.3)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sequel_pro
+  specs:
+    sequel_pro (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-skype
   specs:
     skype (1.0.6)
@@ -196,6 +201,7 @@ DEPENDENCIES
   repository (= 2.2.0)
   ruby (= 6.3.4)
   rubymine (= 1.0.3)
+  sequel_pro (= 1.0.1)
   skype (= 1.0.6)
   spotify (= 1.0.1)
   stdlib (= 4.1.0)
