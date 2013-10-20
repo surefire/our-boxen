@@ -9,6 +9,7 @@ class people::andrewgarner {
   include heroku
   include istatmenus
   include iterm2::stable
+  include python
   include rubymine
   include skype
   include spotify
