@@ -17,6 +17,7 @@ class people::andrewgarner {
   include tmux
   include vagrant
   include virtualbox
+  include vlc
   include zsh
 
   include osx::finder::empty_trash_securely
