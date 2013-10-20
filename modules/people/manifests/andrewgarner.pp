@@ -16,6 +16,7 @@ class people::andrewgarner {
   include spotify
   include tmux
   include vagrant
+  include virtualbox
   include zsh
 
   include osx::finder::empty_trash_securely
