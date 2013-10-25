@@ -21,10 +21,14 @@ class people::andrewgarner {
   include wget
   include zsh
 
+  include osx::dock::hide_indicator_lights
+
   include osx::finder::empty_trash_securely
+  include osx::finder::unhide_library
 
   include osx::global::enable_keyboard_control_access
-  include osx::global::key_repeat_rate
+  include osx::global::expand_print_dialog
+  include osx::global::expand_save_dialog
 
   include osx::no_network_dsstores
   include osx::software_update
@@ -35,6 +39,14 @@ class people::andrewgarner {
   class { 'intellij':
     edition => 'ultimate',
       version => '12.1.6'
+  }
+
+  class { 'osx::global::key_repeat_delay':
+    delay => 200
+  }
+
+  class { 'osx::global::key_repeat_rate':
+    rate => 400
   }
 
   file {
