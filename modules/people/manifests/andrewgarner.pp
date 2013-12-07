@@ -1,6 +1,7 @@
 class people::andrewgarner {
   include alfred
   include appcleaner
+  include dropbox
   include wget
   include zsh
 
