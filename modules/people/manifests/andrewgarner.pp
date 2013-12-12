@@ -80,7 +80,7 @@ class people::andrewgarner {
 
       'intellij':
         edition => 'ultimate',
-        version => '12.1.6';
+        version => '13';
 
     }
 
