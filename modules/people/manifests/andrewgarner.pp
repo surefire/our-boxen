@@ -58,6 +58,7 @@ class people::andrewgarner {
   if $::hostname == 'surefire' {
     include cloudapp
     include emacs
+    include evernote
     include firefox
     include gitx::dev
     include handbrake
