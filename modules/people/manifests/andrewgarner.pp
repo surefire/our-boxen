@@ -66,7 +66,6 @@ class people::andrewgarner {
     include istatmenus
     include iterm2::stable
     include python
-    include rubymine
     include sequel_pro
     include skype
     include spotify
