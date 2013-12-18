@@ -18,6 +18,14 @@ class people::andrewgarner {
   $home     = "/Users/${::boxen_user}"
   $dotfiles = "${home}/.dotfiles"
 
+  class { 'osx::dock::position':
+    position => 'right'
+  }
+
+  class { 'osx::dock::icon_size':
+    size => 36
+  }
+
   class { 'osx::global::key_repeat_delay':
     delay => 200
   }
