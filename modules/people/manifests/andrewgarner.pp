@@ -46,12 +46,10 @@ class people::andrewgarner {
   repository {
 
     $dotfiles:
-      source   => 'andrewgarner/dotfiles',
-      provider => 'git';
+      source => 'andrewgarner/dotfiles';
 
     "${home}/.oh-my-zsh":
-      source   => 'robbyrussell/oh-my-zsh',
-      provider => 'git';
+      source => 'robbyrussell/oh-my-zsh';
 
   }
 
