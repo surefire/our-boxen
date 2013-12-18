@@ -51,6 +51,9 @@ class people::andrewgarner {
     "${home}/.oh-my-zsh":
       source => 'robbyrussell/oh-my-zsh';
 
+    "${boxen::config::srcdir}/tomorrow-theme":
+      source => 'chriskempson/tomorrow-theme';
+
   }
 
   if $::hostname == 'surefire' {
