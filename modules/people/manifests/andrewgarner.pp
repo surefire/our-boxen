@@ -13,6 +13,8 @@ class people::andrewgarner {
   include osx::no_network_dsstores
   include osx::software_update
 
+  osx::recovery_message { 'If this computer is found, please call +44 7971 232140': }
+
   $home     = "/Users/${::boxen_user}"
   $dotfiles = "${home}/.dotfiles"
 
