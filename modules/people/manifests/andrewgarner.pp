@@ -15,8 +15,9 @@ class people::andrewgarner {
 
   osx::recovery_message { 'If this computer is found, please call +44 7971 232140': }
 
-  $home     = "/Users/${::boxen_user}"
-  $dotfiles = "${home}/.dotfiles"
+  $home           = "/Users/${::boxen_user}"
+  $dotfiles       = "${home}/.dotfiles"
+  $tomorrow_theme = "${boxen::config::srcdir}/tomorrow-theme"
 
   class { 'osx::dock::position':
     position => 'right'
@@ -58,11 +59,11 @@ class people::andrewgarner {
     $dotfiles:
       source => 'andrewgarner/dotfiles';
 
+    $tomorrow_theme:
+      source => 'chriskempson/tomorrow-theme';
+
     "${home}/.oh-my-zsh":
       source => 'robbyrussell/oh-my-zsh';
-
-    "${boxen::config::srcdir}/tomorrow-theme":
-      source => 'chriskempson/tomorrow-theme';
 
   }
 
@@ -101,9 +102,15 @@ class people::andrewgarner {
         ensure => link,
         target => "${home}/Dropbox/Preferences/Sublime Text 3/Packages/User";
 
+      "${home}/Library/Preferences/IntelliJIdea13/colors/Tomorrow Night Eighties.xml":
+        ensure  => link,
+        target  => "${$tomorrow_theme}/Jetbrains/colors/Tomorrow Night Eighties.xml",
+        require => Repository[$tomorrow_theme];
+
       "${boxen::config::bindir}/subl":
         ensure => link,
         target => "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl";
+
     }
 
     heroku::plugin {
