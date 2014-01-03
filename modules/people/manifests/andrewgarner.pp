@@ -88,6 +88,10 @@ class people::andrewgarner {
 
     include osx::dock::hide_indicator_lights
 
+    include nodejs::v0_6
+    include nodejs::v0_8
+    include nodejs::v0_10
+
     class {
 
       'intellij':
