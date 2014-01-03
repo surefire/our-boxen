@@ -124,5 +124,12 @@ class people::andrewgarner {
 
     }
 
+    nodejs::module {
+
+      'iectrl':
+        node_version => 'v0.10'
+
+    }
+
   }
 }
