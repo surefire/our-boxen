@@ -42,6 +42,11 @@ class people::andrewgarner {
       target  => "${dotfiles}/.bundle",
       require => Repository[$dotfiles];
 
+    "${home}/.gitignore":
+      ensure  => link,
+      target  => "${dotfiles}/.gitignore",
+      require => Repository[$dotfiles];
+
     "${home}/.profile":
       ensure  => link,
       target  => "${dotfiles}/.profile",
