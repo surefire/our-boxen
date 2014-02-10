@@ -16,7 +16,7 @@ class people::andrewgarner {
   osx::recovery_message { 'If this computer is found, please call +44 7971 232140': }
 
   $home           = "/Users/${::boxen_user}"
-  $dotfiles       = "${home}/.dotfiles"
+  $config         = "${boxen::config::srcdir}/config"
   $tomorrow_theme = "${boxen::config::srcdir}/tomorrow-theme"
 
   class { 'osx::dock::position':
@@ -39,23 +39,33 @@ class people::andrewgarner {
 
     "${home}/.bundle":
       ensure  => link,
-      target  => "${dotfiles}/.bundle",
-      require => Repository[$dotfiles];
+      target  => "${config}/.bundle",
+      require => Repository[$config];
+
+    "${home}/.gitconfig":
+      ensure  => link,
+      target  => "${config}/.gitconfig",
+      require => Repository[$config];
 
     "${home}/.gitignore":
       ensure  => link,
-      target  => "${dotfiles}/.gitignore",
-      require => Repository[$dotfiles];
+      target  => "${config}/.gitignore",
+      require => Repository[$config];
+
+    "${home}/.irbrc":
+      ensure  => link,
+      target  => "${config}/.irbrc",
+      require => Repository[$config];
 
     "${home}/.profile":
       ensure  => link,
-      target  => "${dotfiles}/.profile",
-      require => Repository[$dotfiles];
+      target  => "${config}/.profile",
+      require => Repository[$config];
 
     "${home}/.zshrc":
       ensure  => link,
-      target  => "${dotfiles}/.zshrc",
-      require => Repository[$dotfiles];
+      target  => "${config}/.zshrc",
+      require => Repository[$config];
 
   }
 
@@ -67,8 +77,8 @@ class people::andrewgarner {
 
   repository {
 
-    $dotfiles:
-      source => 'andrewgarner/dotfiles';
+    $config:
+      source => 'andrewgarner/config';
 
     $tomorrow_theme:
       source => 'chriskempson/tomorrow-theme';
