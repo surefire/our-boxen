@@ -15,6 +15,10 @@ class people::andrewgarner {
 
   osx::recovery_message { 'If this computer is found, please call +44 7971 232140': }
 
+  Git::Config::Global <| title == "core.excludesfile" |> {
+    value => '~/.gitignore'
+  }
+
   $home           = "/Users/${::boxen_user}"
   $config         = "${boxen::config::srcdir}/config"
   $tomorrow_theme = "${boxen::config::srcdir}/tomorrow-theme"
