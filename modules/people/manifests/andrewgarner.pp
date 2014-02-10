@@ -107,18 +107,10 @@ class people::andrewgarner {
 
     file {
 
-      "${home}/Library/Application Support/Sublime Text 3/Packages/User":
-        ensure => link,
-        target => "${home}/Dropbox/Preferences/Sublime Text 3/Packages/User";
-
       "${home}/Library/Preferences/IntelliJIdea13/colors/Tomorrow Night Eighties.xml":
         ensure  => link,
         target  => "${$tomorrow_theme}/Jetbrains/colors/Tomorrow Night Eighties.xml",
         require => Repository[$tomorrow_theme];
-
-      "${boxen::config::bindir}/subl":
-        ensure => link,
-        target => "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl";
 
     }
 
