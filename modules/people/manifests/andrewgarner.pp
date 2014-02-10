@@ -123,6 +123,11 @@ class people::andrewgarner {
 
     file {
 
+      "${home}/.tmux.conf":
+        ensure  => link,
+        target  => "${config}/.tmux.conf",
+        require => Repository[$config];
+
       "${home}/Library/Preferences/IntelliJIdea13/colors/Tomorrow Night Eighties.xml":
         ensure  => link,
         target  => "${$tomorrow_theme}/Jetbrains/colors/Tomorrow Night Eighties.xml",
