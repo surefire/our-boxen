@@ -59,6 +59,12 @@ class people::andrewgarner {
 
   }
 
+  package {
+
+    ['direnv']:
+
+  }
+
   repository {
 
     $dotfiles:
