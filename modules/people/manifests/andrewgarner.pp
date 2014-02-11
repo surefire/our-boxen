@@ -153,6 +153,14 @@ class people::andrewgarner {
 
     }
 
+    package {
+
+      'git-sweep':
+        provider => pip,
+        require  => Class['python'];
+
+    }
+
     ruby::version { '1.8.7': }
     ruby::version { '1.9.3': }
     ruby::version { '2.0.0': }
