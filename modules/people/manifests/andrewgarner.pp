@@ -148,7 +148,7 @@ class people::andrewgarner {
 
     nodejs::module {
 
-      'iectrl':
+      ['bower', 'iectrl']:
         node_version => 'v0.10'
 
     }
