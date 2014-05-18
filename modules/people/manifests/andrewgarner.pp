@@ -102,6 +102,7 @@ class people::andrewgarner {
     include heroku
     include istatmenus
     include iterm2::stable
+    include postgresql
     include python
     include sequel_pro
     include skype
