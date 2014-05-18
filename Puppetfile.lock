@@ -209,6 +209,11 @@ GITHUBTARBALL
     zsh (1.0.0)
 
 GITHUBTARBALL
+  remote: ngs/puppet-atom
+  specs:
+    atom (1.0.0)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.0)
@@ -226,6 +231,7 @@ GITHUBTARBALL
 DEPENDENCIES
   alfred (= 1.1.7)
   appcleaner (= 1.0.0)
+  atom (= 1.0.0)
   boxen (= 3.3.8)
   cloudapp (= 1.0.0)
   dnsmasq (= 1.0.1)

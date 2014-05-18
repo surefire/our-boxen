@@ -58,6 +58,7 @@ github "xquartz",    "1.1.1"
 
 github "alfred",     "1.1.7"
 github "appcleaner", "1.0.0"
+github "atom",       "1.0.0", :repo => "ngs/puppet-atom"
 github "cloudapp",   "1.0.0"
 github "dropbox",    "1.2.0"
 github "emacs",      "1.1.0"

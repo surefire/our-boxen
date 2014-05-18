@@ -93,6 +93,7 @@ class people::andrewgarner {
   }
 
   if $::hostname == 'surefire' {
+    include atom
     include cloudapp
     include emacs
     include evernote
