@@ -1,7 +1,7 @@
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
-    alfred (1.1.7)
+    alfred (1.1.8)
 
 GITHUBTARBALL
   remote: boxen/puppet-appcleaner
@@ -234,7 +234,7 @@ GITHUBTARBALL
     module-data (0.0.3)
 
 DEPENDENCIES
-  alfred (= 1.1.7)
+  alfred (= 1.1.8)
   appcleaner (= 1.0.0)
   atom (= 1.0.0)
   boxen (= 3.6.1)
