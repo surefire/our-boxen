@@ -5,11 +5,17 @@ class people::andrewgarner {
   include wget
   include zsh
 
+  include osx::dock::position
+  include osx::dock::icon_size
   include osx::finder::empty_trash_securely
+  include osx::finder::enable_quicklook_text_selection
   include osx::finder::unhide_library
   include osx::global::enable_keyboard_control_access
   include osx::global::expand_print_dialog
   include osx::global::expand_save_dialog
+  include osx::global::key_repeat_delay
+  include osx::global::key_repeat_rate
+  include osx::keyboard::capslock_to_control
   include osx::no_network_dsstores
   include osx::software_update
 
@@ -22,22 +28,6 @@ class people::andrewgarner {
   $home           = "/Users/${::boxen_user}"
   $config         = "${boxen::config::srcdir}/config"
   $tomorrow_theme = "${boxen::config::srcdir}/tomorrow-theme"
-
-  class { 'osx::dock::position':
-    position => 'right'
-  }
-
-  class { 'osx::dock::icon_size':
-    size => 36
-  }
-
-  class { 'osx::global::key_repeat_delay':
-    delay => 200
-  }
-
-  class { 'osx::global::key_repeat_rate':
-    rate => 400
-  }
 
   file {
 

@@ -2,3 +2,8 @@
 ruby::global::version: '2.1.0'
 ruby::build::ensure: 'v20140517'
 ruby::rbenv::ensure: 'v0.4.0'
+
+osx::dock::position::position: 'right'
+osx::dock::icon_size::size: 36
+osx::global::key_repeat_delay::delay: 200
+osx::global::key_repeat_rate::delay: 400
