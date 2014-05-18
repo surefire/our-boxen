@@ -91,6 +91,7 @@ class people::andrewgarner {
     include gitx::dev
     include handbrake
     include heroku
+    include intellij
     include istatmenus
     include iterm2::stable
     include postgresql
@@ -108,14 +109,6 @@ class people::andrewgarner {
     include nodejs::v0_6
     include nodejs::v0_8
     include nodejs::v0_10
-
-    class {
-
-      'intellij':
-        edition => 'ultimate',
-        version => '13';
-
-    }
 
     file {
 

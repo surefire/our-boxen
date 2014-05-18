@@ -7,3 +7,6 @@ osx::dock::position::position: 'right'
 osx::dock::icon_size::size: 36
 osx::global::key_repeat_delay::delay: 200
 osx::global::key_repeat_rate::delay: 400
+
+intellij::edition: 'ultimate'
+intellij::version: '13.1.2'
