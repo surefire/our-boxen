@@ -85,6 +85,7 @@ class people::andrewgarner {
   if $::hostname == 'surefire' {
     include atom
     include cloudapp
+    include docker
     include emacs
     include evernote
     include firefox
