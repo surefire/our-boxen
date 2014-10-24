@@ -25,9 +25,10 @@ class people::andrewgarner {
     value => '~/.gitignore'
   }
 
-  $home           = "/Users/${::boxen_user}"
-  $config         = "${boxen::config::srcdir}/config"
-  $tomorrow_theme = "${boxen::config::srcdir}/tomorrow-theme"
+  $home                 = "/Users/${::boxen_user}"
+  $config               = "${boxen::config::srcdir}/config"
+  $docker_intellij_idea = "${boxen::config::srcdir}/docker-intellij-idea"
+  $tomorrow_theme       = "${boxen::config::srcdir}/tomorrow-theme"
 
   file {
 
@@ -73,6 +74,9 @@ class people::andrewgarner {
 
     $config:
       source => 'andrewgarner/config';
+
+    $docker_intellij_idea:
+      source => 'masgari/docker-intellij-idea';
 
     $tomorrow_theme:
       source => 'chriskempson/tomorrow-theme';
@@ -123,6 +127,11 @@ class people::andrewgarner {
         ensure  => link,
         target  => "${$tomorrow_theme}/Jetbrains/colors/Tomorrow Night Eighties.xml",
         require => Repository[$tomorrow_theme];
+
+      "${home}/Library/Preferences/IntelliJIdea13/filetypes/Dockerfile.xml":
+        ensure  => link,
+        target  => "${$docker_intellij_idea}/Dockerfile.xml",
+        require => Repository[$docker_intellij_idea];
 
     }
 
