@@ -92,6 +92,7 @@ class people::andrewgarner {
     include gitx::dev
     include handbrake
     include heroku
+    include hub
     include intellij
     include istatmenus
     include iterm2::stable
