@@ -59,6 +59,11 @@ class people::andrewgarner {
       target  => "${config}/.bundle",
       require => Repository[$config];
 
+    "${home}/.gemrc":
+      ensure  => link,
+      target  => "${config}/.gemrc",
+      require => Repository[$config];
+
     "${home}/.gitconfig":
       ensure  => link,
       target  => "${config}/.gitconfig",
