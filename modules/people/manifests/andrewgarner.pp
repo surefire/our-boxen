@@ -74,6 +74,11 @@ class people::andrewgarner {
       target  => "${config}/.gitignore",
       require => Repository[$config];
 
+    "${home}/.guardrc":
+      ensure  => link,
+      target  => "${config}/.guardrc",
+      require => Repository[$config];
+
     "${home}/.irbrc":
       ensure  => link,
       target  => "${config}/.irbrc",
