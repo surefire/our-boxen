@@ -112,10 +112,6 @@ class people::andrewgarner {
 
     include osx::dock::hide_indicator_lights
 
-    include nodejs::v0_6
-    include nodejs::v0_8
-    include nodejs::v0_10
-
     file {
 
       "${home}/.tmux.conf":
@@ -148,6 +144,10 @@ class people::andrewgarner {
         node_version => 'v0.10'
 
     }
+
+    nodejs::version { 'v0.6': }
+    nodejs::version { 'v0.8': }
+    nodejs::version { 'v0.10': }
 
     package {
 
