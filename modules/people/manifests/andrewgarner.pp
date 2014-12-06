@@ -15,6 +15,7 @@ class people::andrewgarner {
   include intellij
   include istatmenus
   include iterm2::stable
+  include packer
   include postgresql
   include python
   include sequel_pro
