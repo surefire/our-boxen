@@ -109,6 +109,7 @@ class people::andrewgarner {
     include vagrant
     include virtualbox
     include vlc
+    include vmware_fusion
 
     include osx::dock::hide_indicator_lights
 
