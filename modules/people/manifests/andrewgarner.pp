@@ -1,12 +1,36 @@
 class people::andrewgarner {
   include alfred
   include appcleaner
+  include atom
+  include cloudapp
+  include docker
   include dropbox
+  include emacs
+  include evernote
+  include firefox
+  include gitx::dev
+  include handbrake
+  include heroku
+  include hub
+  include intellij
+  include istatmenus
+  include iterm2::stable
+  include postgresql
+  include python
+  include sequel_pro
+  include skype
+  include spotify
+  include tmux
+  include vagrant
+  include virtualbox
+  include vlc
+  include vmware_fusion
   include wget
   include zsh
 
-  include osx::dock::position
+  include osx::dock::hide_indicator_lights
   include osx::dock::icon_size
+  include osx::dock::position
   include osx::finder::empty_trash_securely
   include osx::finder::enable_quicklook_text_selection
   include osx::finder::unhide_library
@@ -18,8 +42,6 @@ class people::andrewgarner {
   include osx::keyboard::capslock_to_control
   include osx::no_network_dsstores
   include osx::software_update
-
-  osx::recovery_message { 'If this computer is found, please call +44 7971 232140': }
 
   Git::Config::Global <| title == "core.excludesfile" |> {
     value => '~/.gitignore'
@@ -64,6 +86,8 @@ class people::andrewgarner {
 
   }
 
+  osx::recovery_message { 'If this computer is found, please call +44 7971 232140': }
+
   package {
 
     ['direnv']:
@@ -86,75 +110,47 @@ class people::andrewgarner {
 
   }
 
-  if $::hostname == 'surefire' {
-    include atom
-    include cloudapp
-    include docker
-    include emacs
-    include evernote
-    include firefox
-    include gitx::dev
-    include handbrake
-    include heroku
-    include hub
-    include intellij
-    include istatmenus
-    include iterm2::stable
-    include postgresql
-    include python
-    include sequel_pro
-    include skype
-    include spotify
-    include tmux
-    include vagrant
-    include virtualbox
-    include vlc
-    include vmware_fusion
+  file {
 
-    include osx::dock::hide_indicator_lights
+    "${home}/.tmux.conf":
+      ensure  => link,
+      target  => "${config}/.tmux.conf",
+      require => Repository[$config];
 
-    file {
+    "${home}/Library/Preferences/IntelliJIdea13/colors/Tomorrow Night Eighties.xml":
+      ensure  => link,
+      target  => "${$tomorrow_theme}/Jetbrains/colors/Tomorrow Night Eighties.xml",
+      require => Repository[$tomorrow_theme];
 
-      "${home}/.tmux.conf":
-        ensure  => link,
-        target  => "${config}/.tmux.conf",
-        require => Repository[$config];
-
-      "${home}/Library/Preferences/IntelliJIdea13/colors/Tomorrow Night Eighties.xml":
-        ensure  => link,
-        target  => "${$tomorrow_theme}/Jetbrains/colors/Tomorrow Night Eighties.xml",
-        require => Repository[$tomorrow_theme];
-
-      "${home}/Library/Preferences/IntelliJIdea13/filetypes/Dockerfile.xml":
-        ensure  => link,
-        target  => "${$docker_intellij_idea}/Dockerfile.xml",
-        require => Repository[$docker_intellij_idea];
-
-    }
-
-    heroku::plugin {
-
-      'accounts':
-        source => 'ddollar/heroku-accounts'
-
-    }
-
-    nodejs::module {
-
-      ['bower', 'iectrl']:
-        node_version => 'v0.10'
-
-    }
-
-    nodejs::version { 'v0.6': }
-    nodejs::version { 'v0.8': }
-    nodejs::version { 'v0.10': }
-
-    ruby::version { '1.9.3': }
-    ruby::version { '2.0.0': }
-    ruby::version { '2.1.0': }
-    ruby::version { '2.1.1': }
-    ruby::version { '2.1.2': }
+    "${home}/Library/Preferences/IntelliJIdea13/filetypes/Dockerfile.xml":
+      ensure  => link,
+      target  => "${$docker_intellij_idea}/Dockerfile.xml",
+      require => Repository[$docker_intellij_idea];
 
   }
+
+  heroku::plugin {
+
+    'accounts':
+      source => 'ddollar/heroku-accounts'
+
+  }
+
+  nodejs::module {
+
+    ['bower', 'iectrl']:
+      node_version => 'v0.10'
+
+  }
+
+  nodejs::version { 'v0.6': }
+  nodejs::version { 'v0.8': }
+  nodejs::version { 'v0.10': }
+
+  ruby::version { '1.9.3': }
+  ruby::version { '2.0.0': }
+  ruby::version { '2.1.0': }
+  ruby::version { '2.1.1': }
+  ruby::version { '2.1.2': }
+
 }
