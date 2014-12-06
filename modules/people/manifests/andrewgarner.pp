@@ -9,6 +9,7 @@ class people::andrewgarner {
   include evernote
   include firefox
   include gitx::dev
+  include go
   include handbrake
   include heroku
   include hub
