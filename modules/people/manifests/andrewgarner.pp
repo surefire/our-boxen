@@ -149,14 +149,6 @@ class people::andrewgarner {
     nodejs::version { 'v0.8': }
     nodejs::version { 'v0.10': }
 
-    package {
-
-      'git-sweep':
-        provider => pip,
-        require  => Class['python'];
-
-    }
-
     ruby::version { '1.9.3': }
     ruby::version { '2.0.0': }
     ruby::version { '2.1.0': }
