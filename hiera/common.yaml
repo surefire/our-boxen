@@ -1,6 +1,6 @@
 ---
 ruby::global::version: '2.1.0'
-ruby::build::ensure: 'v20141128'
+ruby::build::ensure: 'v20141225'
 ruby::rbenv::ensure: 'v0.4.0'
 
 osx::dock::position::position: 'right'
