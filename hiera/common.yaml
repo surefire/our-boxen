@@ -9,4 +9,4 @@ osx::global::key_repeat_delay::delay: 200
 osx::global::key_repeat_rate::delay: 400
 
 intellij::edition: 'ultimate'
-intellij::version: '14.0.1'
+intellij::version: '14.0.2'
